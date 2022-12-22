@@ -2,8 +2,7 @@ import React from 'react';
 import pizzaLogo from '../assets/img/pizza-logo.svg';
 import { useSelector } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
-import { selectCart } from '../redux/slices/cartSlice';
-import { cartPizza } from '../redux/store';
+import { selectCart } from '../redux/cart/selectors';
 import Find from './Find';
 import { calcTotalCount } from '../utils/calcTotalCount';
 
