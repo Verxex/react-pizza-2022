@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { addItem, selectCartItemById } from '../../redux/slices/cartSlice';
+import { addItem } from '../../redux/cart/slice';
+import { selectCartItemById } from '../../redux/cart/selectors';
 import { selectItemById } from '../../redux/slices/fetchSlice';
-import { cartPizza, fetchPizza } from '../../redux/store';
+import { fetchPizza } from '../../redux/store';
+import { cartPizza } from '../../redux/cart/types';
 
 export const PizzaBlock: React.FC<{ id: string }> = ({ id }) => {
   const PizzaTypes: string[] = ['тонкое', 'традиционное'];

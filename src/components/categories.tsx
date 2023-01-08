@@ -1,7 +1,8 @@
 //import useWhyDidYouUpdate from 'ahooks/lib/useWhyDidYouUpdate';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectFilter, setCategoryIndex } from '../redux/slices/filterSlice';
+import { setCategoryIndex } from '../redux/filter/slice';
+import { selectFilter } from '../redux/filter/selectors';
 export const categories = ['Все', 'Мясные', 'Вегетарианская', 'Гриль', 'Острые', 'Закрытые'];
 
 export const Categories: React.FC = React.memo(() => {

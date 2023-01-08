@@ -1,7 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { removeItem, addItem, delItem, selectCartItemById } from '../../redux/slices/cartSlice';
-import { cartPizza, useAppDispatch } from '../../redux/store';
+import { removeItem, addItem, delItem } from '../../redux/cart/slice';
+import { selectCartItemById } from '../../redux/cart/selectors';
+import { useAppDispatch } from '../../redux/store';
+import { cartPizza } from '../../redux/cart/types';
 
 const PizzaOrder: React.FC<{ id: string }> = ({ id }) => {
   const currentItem = useSelector(selectCartItemById(id)) as cartPizza;

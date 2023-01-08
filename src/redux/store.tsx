@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import filter from './slices/filterSlice';
-import cart from './slices/cartSlice';
+import filter from './filter/slice';
+import cart from './cart/slice';
 import pizza from './slices/fetchSlice';
 import { useDispatch } from 'react-redux';
 
@@ -32,15 +32,7 @@ export type itemPizza = {
   category: number;
   rating: number;
 };
-export type cartPizza = {
-  id: string;
-  imageUrl: string;
-  title: string;
-  type: string;
-  size: number;
-  price: number;
-  count: number;
-};
+
 export type customPizza = {
   id: string;
   imageUrl: string;

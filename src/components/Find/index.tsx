@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useState } from 'react';
 import style from './input.module.scss';
 import debounce from 'lodash.debounce';
-import { setFindStr } from '../../redux/slices/filterSlice';
+import { setFindStr } from '../../redux/filter/slice';
 import { useAppDispatch } from '../../redux/store';
 
 export default function Find() {

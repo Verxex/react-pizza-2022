@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { selectFilter, setFilter } from '../redux/slices/filterSlice';
+import { setFilter } from '../redux/filter/slice';
+import { selectFilter } from '../redux/filter/selectors';
 import { useNavigate } from 'react-router-dom';
 import * as qs from 'qs';
 
@@ -10,7 +11,7 @@ import { Handler } from '../components/handler';
 import { Pagination } from '../components/Pagination';
 import { PizzaBlock } from '../components/PizzaBlock';
 import PizzaSkeleton from '../components/PizzaBlock/PizzaSkeleton';
-import { fetchPizzas, searchPizzaType, selectPizza } from '../redux/slices/fetchSlice';
+import { fetchPizzas, selectPizza } from '../redux/slices/fetchSlice';
 import { useAppDispatch } from '../redux/store';
 
 function HomePage() {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { selectFilter } from '../redux/slices/filterSlice';
+import { selectFilter } from '../redux/filter/selectors';
 import { categories } from './categories';
 
 export const Handler: React.FC = () => {

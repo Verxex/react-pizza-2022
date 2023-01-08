@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { selectFilter, setDirection, setSort, sortIndexType } from '../redux/slices/filterSlice';
+import { setDirection, setSort } from '../redux/filter/slice';
+import { selectFilter } from '../redux/filter/selectors';
 import { useAppDispatch } from '../redux/store';
+import { sortIndexType } from '../redux/filter/types';
 
 export const Sortlist: sortIndexType[] = [
   { name: 'популярности', sortBy: 'rating' },
   { name: 'цене', sortBy: 'price' },
   { name: 'алфавиту', sortBy: 'title' },
 ];
-
 const Filter: React.FC = React.memo(() => {
   const dispach = useAppDispatch();
   const { direction, sortIndex } = useSelector(selectFilter);
